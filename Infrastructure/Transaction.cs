@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SmartSaver_backend.Infrastructure;
+﻿namespace SmartSaver_backend.Infrastructure;
 
 public partial class Transaction
 {
