@@ -1,6 +1,6 @@
-﻿using SmartSaver_backend.Infrastructure;
+﻿using FinSteady_API.Infrastructure;
 
-namespace SmartSaver_backend.Repositories.Interface
+namespace FinSteady_API.Repositories.Interface
 {
 
     public interface IUserRepository

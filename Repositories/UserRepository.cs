@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SmartSaver_backend.Infrastructure;
-using SmartSaver_backend.Repositories.Interface;
+using FinSteady_API.Infrastructure;
+using FinSteady_API.Repositories.Interface;
 
-namespace SmartSaver_backend.Repositories
+namespace FinSteady_API.Repositories
 {
     
     public class UserRepository : RepositoryBase<User>, IUserRepository

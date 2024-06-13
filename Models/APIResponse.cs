@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace SmartSaver_backend.Models
+namespace FinSteady_API.Models
 {
     public class APIResponse
     {

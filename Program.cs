@@ -5,9 +5,9 @@
 
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
-using SmartSaver_backend.Infrastructure;
-using SmartSaver_backend.Repositories.Interface;
-using SmartSaver_backend.Repositories;
+using FinSteady_API.Infrastructure;
+using FinSteady_API.Repositories.Interface;
+using FinSteady_API.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 

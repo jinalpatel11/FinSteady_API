@@ -1,7 +1,7 @@
-﻿using SmartSaver_backend.Infrastructure;
+﻿using FinSteady_API.Infrastructure;
 using System.Reflection;
 
-namespace SmartSaver_backend.Repositories
+namespace FinSteady_API.Repositories
 {
     public static class RepositoryExtensions
     {

@@ -1,4 +1,4 @@
-﻿namespace SmartSaver_backend.Repositories.Interface
+﻿namespace   FinSteady_API.Repositories.Interface
 {
     using System;
     using System.Collections.Generic;

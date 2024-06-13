@@ -1,7 +1,7 @@
-﻿using SmartSaver_backend.Infrastructure;
+﻿using FinSteady_API.Infrastructure;
 using System.ComponentModel.DataAnnotations;
 
-namespace SmartSaver_backend.Models.Request
+namespace FinSteady_API.Models.Request
 {
     public class UserRequestModel
     {

@@ -1,4 +1,4 @@
-﻿namespace SmartSaver_backend.Infrastructure;
+﻿namespace FinSteady_API.Infrastructure;
 
 public partial class User
 {

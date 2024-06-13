@@ -1,4 +1,4 @@
-﻿namespace SmartSaver_backend.Models.Request.Users
+﻿namespace FinSteady_API.Models.Request.Users
 {
     public class ResetPasswordModel
     {

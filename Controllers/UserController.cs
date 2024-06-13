@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SmartSaver_backend.Infrastructure;
-using SmartSaver_backend.Models;
-using SmartSaver_backend.Models.Request;
-using SmartSaver_backend.Models.Request.Users;
-using SmartSaver_backend.Repositories.Interface;
+using FinSteady_API.Infrastructure;
+using FinSteady_API.Models;
+using FinSteady_API.Models.Request;
+using FinSteady_API.Models.Request.Users;
+using FinSteady_API.Repositories.Interface;
 using System.Net;
 
 namespace SmartSaver_backend.Controllers
@@ -83,41 +83,6 @@ namespace SmartSaver_backend.Controllers
 
         }
 
-
-        //[HttpPost]
-        //[ProducesResponseType(StatusCodes.Status201Created)]
-        //[ProducesResponseType(StatusCodes.Status400BadRequest)]
-        //[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        //public async Task<ActionResult<APIResponse>> CreateUser([FromBody] UserRequestModel createDTO)
-        //{
-        //    try
-        //    {
-        //        if (!ModelState.IsValid)
-        //        {
-        //            return BadRequest(ModelState);
-        //        }
-
-
-        //        if (createDTO == null)
-        //        {
-        //            return BadRequest(createDTO);
-        //        }
-
-        //        User villa = createDTO.ToEntity();
-
-        //        villa = await UserTableRepository.AddUser(villa);
-        //        _response.Result = villa;
-        //        _response.StatusCode = HttpStatusCode.Created;
-        //        return CreatedAtRoute("GetUser", new { id = villa.Id }, _response);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _response.IsSuccess = false;
-        //        _response.ErrorMessages
-        //             = new List<string>() { ex.ToString() };
-        //    }
-        //    return _response;
-        //}
 
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status403Forbidden)]

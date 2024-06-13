@@ -1,7 +1,7 @@
-﻿namespace SmartSaver_backend.Repositories
+﻿namespace FinSteady_API.Repositories
 {
     using Microsoft.EntityFrameworkCore;
-    using SmartSaver_backend.Repositories.Interface;
+    using FinSteady_API.Repositories.Interface;
     using System;
     using System.Collections.Generic;
     using System.Linq;
