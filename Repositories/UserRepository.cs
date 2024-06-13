@@ -4,14 +4,12 @@ using SmartSaver_backend.Repositories.Interface;
 
 namespace SmartSaver_backend.Repositories
 {
-    public class UserRepository
-    {
-    }
-    public class UserTableRepository : RepositoryBase<User>, IUserRepository
+    
+    public class UserRepository : RepositoryBase<User>, IUserRepository
     {
         private readonly SmartSaverDatabaseContext calistaContext;
 
-        public UserTableRepository(SmartSaverDatabaseContext smartSaverDatabaseContext)
+        public UserRepository(SmartSaverDatabaseContext smartSaverDatabaseContext)
         : base(smartSaverDatabaseContext)
         {
             this.calistaContext = calistaContext;

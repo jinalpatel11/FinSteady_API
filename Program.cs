@@ -6,6 +6,8 @@
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using SmartSaver_backend.Infrastructure;
+using SmartSaver_backend.Repositories.Interface;
+using SmartSaver_backend.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,14 +15,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContext<SmartSaverDatabaseContext>(option =>
 {
-    // option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
-    option.UseSqlServer("Data Source=AJ; Initial Catalog=SmartSaverDatabase; Trusted_Connection=True; TrustServerCertificate=True;");
+     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+   // option.UseSqlServer("Data Source=AJ; Initial Catalog=SmartSaverDatabase; Trusted_Connection=True; TrustServerCertificate=True;");
 
 });
 
 builder.Services.AddEntityFrameworkSqlServer();
 
-
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 // Load configuration settings from appsettings.json
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
