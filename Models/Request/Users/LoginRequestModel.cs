@@ -7,6 +7,6 @@ namespace FinSteady_API.Models.Request.Users
         [StringLength(10)]
         public string Password { get; set; }
 
-        public string Emial { get; set; }
+        public string Email { get; set; }
     }
 }

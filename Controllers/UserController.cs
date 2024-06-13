@@ -142,6 +142,7 @@ namespace SmartSaver_backend.Controllers
                 _response.ErrorMessages
                      = new List<string>() { ex.ToString() };
             }
+
             return _response;
         }
 
@@ -157,7 +158,7 @@ namespace SmartSaver_backend.Controllers
                     return BadRequest();
                 }
 
-                User dbUser = this.UserRepository.GetUsers().Result.FirstOrDefault(x => x.Email == loginRequest.Emial && x.PasswordHash == loginRequest.Password);
+                User dbUser = this.UserRepository.GetUsers().Result.FirstOrDefault(x => x.Email == loginRequest.Email && x.PasswordHash == loginRequest.Password);
                 _response.Result = dbUser;
                 _response.StatusCode = HttpStatusCode.NoContent;
                 _response.IsSuccess = true;
