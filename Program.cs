@@ -6,6 +6,8 @@
 using FinSteady_API.Infrastructure;
 using FinSteady_API.Repositories;
 using FinSteady_API.Repositories.Interface;
+using FinSteady_API.Service.Interface;
+using FinSteady_API.Services;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,6 +25,16 @@ builder.Services.AddDbContext<SmartSaverDatabaseContext>(option =>
 builder.Services.AddEntityFrameworkSqlServer();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ICardRepository, CardRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ISavingGoalRepository, SavingGoalRepository>();
+builder.Services.AddScoped<ISavingRuleRepository, SavingRuleRepository>();
+builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
+
+
+// Add DummyDataService registration
+builder.Services.AddScoped<IDummyDataService, DummyDataService>();
+
 // Load configuration settings from appsettings.json
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
@@ -45,6 +57,14 @@ builder.Services.Configure<GzipCompressionProviderOptions>(options =>
 });
 
 var app = builder.Build();
+
+
+// Ensure dummy data when application starts
+using (var scope = app.Services.CreateScope())
+{
+    var dummyDataService = scope.ServiceProvider.GetRequiredService<IDummyDataService>();
+    dummyDataService.EnsureAllDummyDataAsync().Wait(); // EnsureAllDummyDataAsync should be awaited in a non-async context
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
