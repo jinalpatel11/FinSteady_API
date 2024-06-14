@@ -3,11 +3,11 @@
 
 
 
+using FinSteady_API.Infrastructure;
+using FinSteady_API.Repositories;
+using FinSteady_API.Repositories.Interface;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
-using FinSteady_API.Infrastructure;
-using FinSteady_API.Repositories.Interface;
-using FinSteady_API.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,8 +15,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContext<SmartSaverDatabaseContext>(option =>
 {
-     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-   // option.UseSqlServer("Data Source=AJ; Initial Catalog=SmartSaverDatabase; Trusted_Connection=True; TrustServerCertificate=True;");
+    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    // option.UseSqlServer("Data Source=AJ; Initial Catalog=SmartSaverDatabase; Trusted_Connection=True; TrustServerCertificate=True;");
 
 });
 

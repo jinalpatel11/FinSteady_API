@@ -1,7 +1,7 @@
 ﻿namespace FinSteady_API.Repositories
 {
-    using Microsoft.EntityFrameworkCore;
     using FinSteady_API.Repositories.Interface;
+    using Microsoft.EntityFrameworkCore;
     using System;
     using System.Collections.Generic;
     using System.Linq;

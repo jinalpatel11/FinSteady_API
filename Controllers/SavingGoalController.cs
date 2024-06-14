@@ -1,10 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using FinSteady_API.Infrastructure;
-using FinSteady_API.Models.Request.Users;
-using FinSteady_API.Models.Request;
-using FinSteady_API.Models;
+﻿using FinSteady_API.Models;
 using FinSteady_API.Repositories.Interface;
-using System.Net;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FinSteady_API.Controllers
 {

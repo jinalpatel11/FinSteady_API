@@ -1,12 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using FinSteady_API.Infrastructure;
+﻿using FinSteady_API.Infrastructure;
 using FinSteady_API.Models;
 using FinSteady_API.Models.Request;
 using FinSteady_API.Models.Request.Users;
 using FinSteady_API.Repositories.Interface;
+using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace SmartSaver_backend.Controllers
+namespace FinSteady_API.Controllers
 {
 
 
@@ -190,7 +190,7 @@ namespace SmartSaver_backend.Controllers
                 User dbUser = userList.FirstOrDefault(x => x.Email == forgotPasswordRequest.Email);
                 //write code to send mail for sending link of forgot password
 
-               // await _emailService.SendEmailAsync(dbUser.Email, "Forgot password Link", "Need to pass request body here UI link to of reset password");
+                // await _emailService.SendEmailAsync(dbUser.Email, "Forgot password Link", "Need to pass request body here UI link to of reset password");
                 _response.Result = "Email sent successfully";
                 _response.StatusCode = HttpStatusCode.NoContent;
                 _response.IsSuccess = true;

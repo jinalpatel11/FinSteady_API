@@ -1,10 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using FinSteady_API.Infrastructure;
+﻿using FinSteady_API.Infrastructure;
 using FinSteady_API.Repositories.Interface;
+using Microsoft.EntityFrameworkCore;
 
 namespace FinSteady_API.Repositories
 {
-    
+
     public class UserRepository : RepositoryBase<User>, IUserRepository
     {
         private readonly SmartSaverDatabaseContext calistaContext;
