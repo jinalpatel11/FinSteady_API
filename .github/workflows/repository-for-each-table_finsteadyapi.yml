@@ -53,4 +53,4 @@ jobs:
           app-name: 'FinSteadyAPI'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F6104E024E7F49D68BFBC54279175188 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E628B3DDBB3941838E147A580B2AF190 }}
